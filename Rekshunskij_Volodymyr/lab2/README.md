@@ -1,0 +1,1 @@
+Screenshots with passed tests
