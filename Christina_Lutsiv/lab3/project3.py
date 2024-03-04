@@ -1,5 +1,7 @@
 limit = 10
+current_number = 2
 
-print("Виведення парних чисел з використанням циклу for:")
-for number in range(2, limit+1, 2):
-    print(number)
+print("Виведення парних чисел з використанням циклу while:")
+while current_number <= limit:
+    print(current_number)
+    current_number += 2
