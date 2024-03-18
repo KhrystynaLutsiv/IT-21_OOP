@@ -26,7 +26,7 @@
 Хід роботи
 Проходимо рівень на w3schools.com
 
-[Практична робота №2] [/git/IT-21_OOP/Rekshunskij_Volodymyr/lab2]
+[Практична робота №2] [/git/IT-21_OOP/Anna_Prendota/lab2]
 
 ## Висновки: 
 
