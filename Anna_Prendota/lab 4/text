@@ -1,1 +1,5 @@
+def array(name):
+    print("Привіт, " + name + "!")
+    
+array("Аня")
 
