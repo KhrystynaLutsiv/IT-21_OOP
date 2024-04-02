@@ -1,1 +1,14 @@
-
+class Bathroom:
+  def  __init__(self, bath, rug, washbasin, washing_machine, toilet):
+  
+    self.bath=bath
+    self.rug=rug
+    self.washbasin=washbasin
+    self.washing_machine=washing_machine
+    self.toilet=toilet
+   
+    def room(self):
+        return f"bathroom with {self.bath}, {self.rug}, {self.washbasin}, {self.washing_machine},{self.toilet}"
+    
+room1=Bathroom("bath", "washbasin", "rug", "toilet", "washing_machine")
+    print(room1.room())
