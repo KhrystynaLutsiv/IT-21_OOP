@@ -1,0 +1,8 @@
+
+def hello(name):
+    massage = "Hello, " + name + "!"
+    return massage
+
+user = "Христина"
+output = hello(user)
+print(output)
