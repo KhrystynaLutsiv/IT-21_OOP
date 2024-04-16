@@ -1,0 +1,22 @@
+class Cars:
+    def __init__(self, toyota, bmw, tesla):
+        self.toyota = toyota
+        self.bmw = bmw
+        self.tesla = tesla
+    
+    def color(self):
+        return f"Колір автомобіля Toyota: {self.toyota}, BMW: {self.bmw}, Tesla: {self.tesla}" 
+
+class Year(Cars):
+    def __init__(self, year_toyota, year_bmw, year_tesla):
+        super().__init__("Toyota", "BMW", "Tesla")
+        self.year_toyota = year_toyota
+        self.year_bmw = year_bmw
+        self.year_tesla = year_tesla
+    
+    def color(self):
+        return f"Рік випуску автомобіля Toyota: {self.year_toyota}, BMW: {self.year_bmw}, Tesla: {self.year_tesla}" 
+
+
+car_years = Year(2012, 2020, 2019)
+print(car_years.color())
