@@ -20,9 +20,9 @@ class People:
     def welcome():
         return "Welcome to the People class!"
 
-obj1 = People("Yuriy", 21, "Student")
-obj2 = People("Petro", 32, "Homeless")
-obj3 = People("Onufriy", 44, "Priest")
+obj1 = People("Roman", 21, "Student")
+obj2 = People("Ivan", 32, "Homeless")
+obj3 = People("Sergio", 44, "Priest")
 
 print(People.welcome())
 
