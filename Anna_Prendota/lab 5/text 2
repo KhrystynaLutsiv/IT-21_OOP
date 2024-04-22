@@ -1,0 +1,9 @@
+class Dog:
+    name = None
+    age = None
+
+dog = Dog()
+dog.name = "Scooby-Doo" 
+dog.age = 3
+print(dog.name)
+print(dog.age)

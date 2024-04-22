@@ -1,0 +1,21 @@
+class Person:
+    def sounds(self):
+        pass
+class cry(Person):
+    def sounds(self):
+        return "Схлипування"
+class farting(Person):
+    def sounds(self):
+        return "Фуууу"
+class snoring(Person):
+    def sounds(self):
+        return "Штуркни його, най перевернеться"
+    
+Cry = cry()
+print (Cry.sounds())
+
+Farting = farting()
+print (Farting.sounds())
+
+Snoring = snoring()
+print (Snoring.sounds())

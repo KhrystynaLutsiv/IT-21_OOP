@@ -1,0 +1,13 @@
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    @classmethod
+    def from_birth_year(cls, name, birth_year):
+        age = 2024 - birth_year
+        return cls(name, age)
+
+
+person = Person.from_birth_year("Alice", 1990)
+print(person.name, person.age) 
+    

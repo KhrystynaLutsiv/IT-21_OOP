@@ -1,0 +1,16 @@
+class arts:
+    def __init__(self, dancing, singing):
+        self.dancing = dancing
+        self.singing = singing
+    
+class time(arts):
+    def __init__(self, dancing, singing, morning, evening):
+        super().__init__(dancing, singing)
+        self.morning = morning
+        self.evening = evening
+        
+obj = time(10, 17, "7am", "7pm")
+print(obj.dancing)
+print(obj.singing)
+print(obj.morning)
+print(obj.evening)
