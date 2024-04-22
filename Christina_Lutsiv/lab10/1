@@ -1,0 +1,28 @@
+import time
+def measure_time(func):
+    def wrapper(*args, **kwargs):
+        start_time = time.time()
+        result = func(*args, **kwargs)
+        end_time = time.time()
+        execution_time = end_time - start_time
+        print(f"Метод {func.__name__} виконаний за {execution_time} секунд")
+        return result
+    return wrapper
+
+class MyClass:
+    @measure_time
+    def method1(self):
+        time.sleep(1)  
+        return "Виконано method1"
+
+    @measure_time
+    def method2(self, n):
+        time.sleep(n)  
+        return "Виконано method2"
+
+
+obj = MyClass()
+
+
+print(obj.method1())
+print(obj.method2(2))
