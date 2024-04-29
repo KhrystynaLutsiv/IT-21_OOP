@@ -1,0 +1,34 @@
+class Animal:
+    def __init__(self, name, sound):
+        self.name = name
+        self.sound = sound
+
+    def make_sound(self):
+        print(f"{self.name} каже {self.sound}")
+
+
+class Dog(Animal):
+    def __init__(self, name):
+        super().__init__(name, "Гав")
+
+    def wag_tail(self):
+        print(f"{self.name} махає хвостом")
+
+
+class Cat(Animal):
+    def __init__(self, name):
+        super().__init__(name, "Мяв")
+
+    def scratch_furniture(self):
+        print(f"{self.name} царапає меблі")
+
+
+if __name__ == "__main__":
+    dog = Dog("Тузік")
+    cat = Cat("Панас")
+
+    dog.make_sound()  
+    dog.wag_tail()   
+
+    cat.make_sound()           
+    cat.scratch_furniture()     
