@@ -1,0 +1,9 @@
+class Car:
+    def __repr__(self):
+        return f"Car('{self.name}', '{self.model}', {self.year})"
+
+car = Car()
+car.name = "Audi"
+car.model = "RSQ8"
+car.year = 2022
+print(repr(car))
