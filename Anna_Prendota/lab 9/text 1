@@ -1,0 +1,10 @@
+class Car:
+    def __init__(self, name, model, year):
+        self.name = name
+        self.model = model
+        self.year = year
+
+car = Car("Audi", "S6", 2020)
+print(car.name)  
+print(car.model)  
+print(car.year)   
