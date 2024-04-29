@@ -1,0 +1,18 @@
+class Car:
+    number_of_cars = 0
+
+    def __init__(self, make, model):
+        self.make = make
+        self.model = model
+        Car.number_of_cars += 1
+
+    @classmethod
+    def get_number_of_cars(cls):
+        return cls.number_of_cars
+
+car1 = Car("Toyota", "Camry")
+car2 = Car("Honda", "Civic")
+car3 = Car("Ford", "Focus")
+car4 = Car("Audi", "RS")
+
+print("Кількість автомобілів:", Car.get_number_of_cars())  # Очікуємо отримати 3
