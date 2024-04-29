@@ -1,0 +1,9 @@
+class Car:
+    def __str__(self):
+        return f"{self.year} {self.name} {self.model}"
+
+car = Car()
+car.name = "Audi"
+car.model = "A4"
+car.year = 2021
+print(car)  
