@@ -1,0 +1,32 @@
+class Film:
+    def __init__(self, title, director):
+        self.title = title
+        self.director = director
+
+    def get_info(self):
+        return f"Назва: {self.title}, Режисер: {self.director}"
+
+
+class ActionFilm(Film):
+    def __init__(self, title, director, rating):
+        super().__init__(title, director)
+        self.rating = rating
+
+    def get_info(self):
+        return f"{super().get_info()}, Віковий рейтинг: {self.rating}"
+
+
+class ComedyFilm(Film):
+    def __init__(self, title, director, humor_level):
+        super().__init__(title, director)
+        self.humor_level = humor_level
+
+    def get_info(self):
+        return f"{super().get_info()}, Рівень комедії: {self.humor_level}"
+
+if __name__ == "__main__":
+    action_movie = ActionFilm("Форсаж", "Луї Летер'є", "12+")
+    comedy_movie = ComedyFilm("Три телепні", "Боббі Фаррелі", "Високий")
+
+    print(action_movie.get_info())  
+    print(comedy_movie.get_info())  
