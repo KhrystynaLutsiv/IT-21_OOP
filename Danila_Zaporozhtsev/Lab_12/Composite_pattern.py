@@ -3,6 +3,19 @@ class Music:
         pass
 
 
+class Song(Music):
+    def __init__(self, name, artist):
+        self.name = name
+        self.artist = artist
+
+    def play(self):
+        print(f"Грає пісня: {self.name} від {self.artist}")
+
+    def show_by_artist(self, artist):
+        if self.artist == artist:
+            print(f"Пісня: {self.name}, Виконавець: {self.artist}")
+
+
 class Playlist(Music):
     def __init__(self, name):
         self.name = name
@@ -19,22 +32,6 @@ class Playlist(Music):
     def show_by_artist(self, artist):
         for child in self.children:
             child.show_by_artist(artist)
-
-
-class Song(Music):
-    def __init__(self, name, artist):
-        self.name = name
-        self.artist = artist
-
-    def play(self):
-        print(f"Грає пісня: {self.name} від {self.artist}")
-
-    def get_artist(self):
-        return self.artist
-
-    def show_by_artist(self, artist):
-        if self.artist == artist:
-            print(f"Пісня: {self.name}, Виконавець: {self.artist}")
 
 
 main_playlist = Playlist("Усі пісні")
