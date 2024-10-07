@@ -1,1 +1,27 @@
+class CarFactorySingleton:
+    _instance = None
 
+    def __new__(cls):
+        if cls._instance is None:
+            cls._instance = super(CarFactorySingleton, cls).__new__(cls)
+        return cls._instance
+
+    def __init__(self):
+        self.car_brand = "Tesla" 
+
+    def set_car_brand(self, brand):
+        self.car_brand = brand
+
+    def get_car_brand(self):
+        return self.car_brand
+
+factory1 = CarFactorySingleton()
+factory2 = CarFactorySingleton()
+
+print(factory1 is factory2)  
+
+print(factory1.get_car_brand())  
+
+factory1.set_car_brand("BMW")
+
+print(factory2.get_car_brand()) 
