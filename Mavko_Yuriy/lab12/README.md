@@ -40,7 +40,28 @@
 словами, адаптер виступає як посередник між цими двома 
 несумісними об'єктами.
 
+UML-ДІАГРАМА
 
+```mermaid
+classDiagram
+    class OldPrinter {
+        +print_text(text: str)
+    }
+
+    class NewPrinterInterface {
+        <<interface>>
+        +print_message(message: str)
+    }
+
+    class PrinterAdapter {
+        -old_printer: OldPrinter
+        +__init__(old_printer: OldPrinter)
+        +print_message(message: str)
+    }
+
+    NewPrinterInterface <|.. PrinterAdapter
+    PrinterAdapter --> OldPrinter : delegates
+```
 
 Запитання для самоконтролю
 1. Що таке структурні шаблони?
@@ -68,26 +89,3 @@ print_message адаптер викликає метод print_text
 ## Висновки. 
 
 На даній лабораторній роботі я познайомився з групою структурних шаблонів проектування. 
-
-UML-ДІАГРАМА
-
-```mermaid
-classDiagram
-    class OldPrinter {
-        +print_text(text: str)
-    }
-
-    class NewPrinterInterface {
-        <<interface>>
-        +print_message(message: str)
-    }
-
-    class PrinterAdapter {
-        -old_printer: OldPrinter
-        +__init__(old_printer: OldPrinter)
-        +print_message(message: str)
-    }
-
-    NewPrinterInterface <|.. PrinterAdapter
-    PrinterAdapter --> OldPrinter : delegates
-
