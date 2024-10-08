@@ -1,0 +1,45 @@
+
+class Observer:
+    def update(self, job):
+        pass
+
+class Worker(Observer):
+    def __init__(self, name):
+        self.name = name
+
+    def update(self, job):
+        print(f"{self.name} отримав нову вакансію: {job}")
+
+class JobMarket:
+    def __init__(self):
+        self._observers = []
+
+    def attach(self, observer: Observer):
+        self._observers.append(observer)
+
+    def detach(self, observer: Observer):
+        self._observers.remove(observer)
+
+    def notify(self, job):
+        for observer in self._observers:
+            observer.update(job)
+
+    def post_job(self, job):
+        print(f"Новий пост на ринку праці: {job}")
+        self.notify(job)
+
+if __name__ == "__main__":
+    job_market = JobMarket()
+
+    worker1 = Worker("Олег")
+    worker2 = Worker("Анна")
+
+    job_market.attach(worker1)
+    job_market.attach(worker2)
+
+    job_market.post_job("Програміст Python") 
+    job_market.post_job("Дизайнер графіки") 
+
+    job_market.detach(worker1)
+
+    job_market.post_job("Менеджер проектів") 
