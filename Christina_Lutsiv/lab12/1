@@ -1,0 +1,30 @@
+class CoffeeMachine:
+    def brew_coffee(self):
+        raise NotImplementedError
+
+class BasicCoffeeMachine(CoffeeMachine):
+    def brew_coffee(self):
+        print("Готуємо каву...")
+
+class TeaMachine:
+    def brew_tea(self):
+        raise NotImplementedError
+
+class BasicTeaMachine(TeaMachine):
+    def brew_tea(self):
+        print("Готуємо чай...")
+
+class TeaMachineAdapter(CoffeeMachine):
+    def __init__(self, tea_machine):
+        self.tea_machine = tea_machine
+
+    def brew_coffee(self):
+        self.tea_machine.brew_tea()
+
+if __name__ == "__main__":
+    coffee_machine = BasicCoffeeMachine()
+    coffee_machine.brew_coffee()  
+    
+    tea_machine = BasicTeaMachine()
+    tea_adapter = TeaMachineAdapter(tea_machine)
+    tea_adapter.brew_coffee()  
