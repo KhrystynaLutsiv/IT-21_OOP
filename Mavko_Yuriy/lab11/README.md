@@ -103,7 +103,7 @@ classDiagram
     ComputerBuilder <|-- OfficeComputerBuilder
     GamingComputerBuilder --> Computer : Creates
     OfficeComputerBuilder --> Computer : Creates
-'''
+```
 
 Запитання для самоконтролю
 1. Що таке твірні шаблони?
