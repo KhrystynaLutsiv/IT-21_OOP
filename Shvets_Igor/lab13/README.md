@@ -68,7 +68,7 @@ classDiagram
 
     Originator "1" --> "*" Memento : creates
     Caretaker "1" --> "*" Memento : stores
-
+'''
 
 Запитання для самоконтролю
 1. Що таке поведінкові шаблони?
