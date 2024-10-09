@@ -41,18 +41,6 @@
 
 На даній лабораторній роботі ми ознайомились з групою твірних шаблонів проектування. 
 
-```mermaid
-classDiagram
-    class Audi {
-        - model: str
-        - engine: str
-        - color: str
-        - horsepower: int
-        + __init__(model: str, engine: str, color: str, horsepower: int)
-        + clone(): Audi
-        + __str__(): str
-    }
-
 1. Що таке твірні шаблони?
 Твірні шаблони (creational design patterns) відповідають за створення об’єктів. Вони абстрагують процес створення об'єкта, що дозволяє системі бути незалежною від способу створення, композиції та представлення об'єктів. Це може включати управління об’єктами, які потребують складної конфігурації, або надання доступу до об'єктів без прямого їх створення.
 
@@ -76,3 +64,15 @@ cloned_audi.color = "білий"
 cloned_audi.model = "RS7"
 cloned_audi.engine = "4.0 TFSI V8"
 cloned_audi.horsepower = 605
+
+```mermaid
+classDiagram
+    class Audi {
+        - model: str
+        - engine: str
+        - color: str
+        - horsepower: int
+        + __init__(model: str, engine: str, color: str, horsepower: int)
+        + clone(): Audi
+        + __str__(): str
+    }
