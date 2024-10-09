@@ -42,7 +42,6 @@ Caretaker (Опікун) – керує збереженням і відновл
 
 UML-ДІАГРАМА
 
-```mermaid
 classDiagram
     class Originator {
         - _state: str
@@ -68,7 +67,7 @@ classDiagram
 
     Originator "1" --> "*" Memento : creates
     Caretaker "1" --> "*" Memento : stores
-'''
+
 
 Запитання для самоконтролю
 1. Що таке поведінкові шаблони?
