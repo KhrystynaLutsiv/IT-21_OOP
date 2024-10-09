@@ -1,0 +1,27 @@
+@startuml
+class Music {
+    +play()
+    +show_by_artist(artist: str)
+}
+
+class Song {
+    +name: str
+    +artist: str
+    +__init__(name: str, artist: str)
+    +play()
+    +show_by_artist(artist: str)
+}
+
+class Playlist {
+    +name: str
+    +children: List<Music>
+    +__init__(name: str)
+    +add(component: Music)
+    +play()
+    +show_by_artist(artist: str)
+}
+
+Music <|-- Song
+Music <|-- Playlist
+Playlist o-- Music : children
+@enduml
