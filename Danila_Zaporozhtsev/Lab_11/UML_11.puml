@@ -1,0 +1,28 @@
+@startuml
+class Movie {
+    +title: str
+    +__init__(title: str)
+    +description(): str
+}
+
+class ActionMovie {
+    +description(): str
+}
+
+class ComedyMovie {
+    +description(): str
+}
+
+class SuperheroMovie {
+    +description(): str
+}
+
+class Factory {
+    +create_movie(genre: str, title: str): Movie
+}
+
+Movie <|-- ActionMovie
+Movie <|-- ComedyMovie
+Movie <|-- SuperheroMovie
+Factory --> Movie : create_movie
+@enduml
