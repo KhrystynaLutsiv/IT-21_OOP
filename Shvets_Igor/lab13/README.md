@@ -43,7 +43,8 @@ Caretaker (Опікун) – керує збереженням і відновл
 UML-ДІАГРАМА
 
 classDiagram
-    class Originator {
+    
+    {class Originator 
         - _state: str
         + __init__(state: str)
         + set_state(state: str)
