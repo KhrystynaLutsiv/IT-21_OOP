@@ -1,0 +1,36 @@
+@startuml
+class Company {
+    +next_worker: Company
+    +__init__()
+    +set_next_worker(next_worker: Company): Company
+    +request(request: str)
+    +process_request(request: str)
+
+}
+
+class Tester {
+    +process_request(request: str)
+}
+
+class Developer {
+    +process_request(request: str)
+}
+
+class Designer {
+    +process_request(request: str)
+}
+
+class Analyst {
+    +process_request(request: str)
+}
+
+class Manager {
+    +process_request(request: str)
+}
+
+Company <|-- Tester
+Company <|-- Developer
+Company <|-- Designer
+Company <|-- Analyst
+Company <|-- Manager
+@enduml
