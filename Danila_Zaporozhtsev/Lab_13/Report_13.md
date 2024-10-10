@@ -59,6 +59,12 @@ company.set_next_worker(tester).set_next_worker(developer).set_next_worker(desig
 ``` 
 Створюю запит від клієнта до компанії, вона з'єднує клієнта з тим працівником, який може виконатинати його.
 
+Ось UML діаграма зв'язків класів:
+
+![UML діаграма](https://raw.githubusercontent.com/KhrystynaLutsiv/IT-21_OOP/refs/heads/master/Danila_Zaporozhtsev/Lab_13/UML_13.png)
+
+І посилання на повний код програми:
+
 [Практична робота 13](./Chain_Of_Rensponsibility_pattern.py)
 
 ## Висновки. 
