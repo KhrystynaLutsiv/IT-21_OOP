@@ -65,15 +65,14 @@ cloned_audi.horsepower = 605
 
 ```mermaid
 classDiagram
-    class Audi {
-        - model: str
-        - engine: str
-        - color: str
-        - horsepower: int
-        + __init__(model: str, engine: str, color: str, horsepower: int)
-        + clone(): Audi
-        + __str__(): str
+    class EventLogger {
+        -log: List
+        +__new__()
+        +add_event(event_message)
+        +get_all_events()
     }
+    EventLogger o-- "1" EventLogger : Singleton
+
 ```
 ## Висновки. 
 На даній лабораторній роботі ми ознайомились з групою твірних шаблонів проектування. 
