@@ -85,9 +85,11 @@ def show_by_artist(self, artist):
 Перебираючи плейлист, де `isinstance` спочатку перевіряє чи є об'єкт екземпляром класу, та чи заданий автор являється автором даної пісні, а потім виводиться ця пісня, і цикл повторюється доти, доки `isinstance` не покаже `False`
 
 Далі нведена UML діаграми зв'язків класів:
+
 ![UML діаграма](https://raw.githubusercontent.com/KhrystynaLutsiv/IT-21_OOP/refs/heads/master/Danila_Zaporozhtsev/Lab_12/UML_12.png)
 
 Та Посилання на повний код:
+
 [Практична робота 12](./Composite_pattern.py)
 
 ## Висновки. 
