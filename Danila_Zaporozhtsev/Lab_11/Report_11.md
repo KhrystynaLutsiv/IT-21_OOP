@@ -53,7 +53,8 @@ class Factory:
             print("Невідомий жанр фільму")
 ```
 Далі нведена UML діаграми зв'язків класів.
-!(./.UML_11.png)
+
+!(https://raw.githubusercontent.com/KhrystynaLutsiv/IT-21_OOP/refs/heads/master/Danila_Zaporozhtsev/Lab_11/UML_11.png)
 
 Посилання на повний код:
 [Лабораторна робота 11](./Creational_pattern.py)
