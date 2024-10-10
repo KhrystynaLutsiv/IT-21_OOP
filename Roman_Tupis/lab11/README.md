@@ -45,23 +45,6 @@
 2. Які твірні шаблони Вам відомі?
 Singleton, Factory Method, Abstract Factory ,Builder ,Prototype
 
-3.Компоненти реалізації:
-Клас Audi: є конкретним прототипом. Він має атрибути: model, engine, color, і horsepower, які визначають характеристики автомобіля .
-Метод clone() реалізує функціональність клонування ,використовує copy.deepcopy(self) для створення повної копії об'єкта. 
-Метод __str__()  містить інформацію про модель, двигун, колір і потужність автомобіля. 
-Створення оригінального об'єкта:
-original_audi = Audi("RS6", "4.0 TFSI V8", "чорний", 600)
-print(f"Оригінал Audi RS: {original_audi}")
-об'єкт original_audi   (Audi Rs6)
-
-Клонування об'єкта:
-cloned_audi = original_audi.clone()
-
-Модифікація клону:
-cloned_audi.color = "білий"
-cloned_audi.model = "RS7"
-cloned_audi.engine = "4.0 TFSI V8"
-cloned_audi.horsepower = 605
 
 ```mermaid
 classDiagram
