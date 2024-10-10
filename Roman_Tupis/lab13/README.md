@@ -54,36 +54,28 @@ DiscountPricingStrategy: реалізує цінову стратегію зі �
 
 ```mermaid
 classDiagram
-    class PricingStrategy {
-        <<interface>>
-        + calculate_price(base_price: float): float
+    class TextDocument {
+        +accept(visitor)
+    }
+    
+    class PdfDocument {
+        +accept(visitor)
+    }
+    
+    class SpreadsheetDocument {
+        +accept(visitor)
     }
 
-    class RegularPricingStrategy {
-        + calculate_price(base_price: float): float
+    class DocumentVisitor {
+        +visit_text_document(text_document)
+        +visit_pdf_document(pdf_document)
+        +visit_spreadsheet_document(spreadsheet_document)
     }
 
-    class DiscountPricingStrategy {
-        - discount: float
-        + __init__(discount: float)
-        + calculate_price(base_price: float): float
-    }
+    TextDocument o-- DocumentVisitor
+    PdfDocument o-- DocumentVisitor
+    SpreadsheetDocument o-- DocumentVisitor
 
-    class Audi {
-        - model: str
-        - engine: str
-        - color: str
-        - horsepower: int
-        - base_price: float
-        - pricing_strategy: PricingStrategy
-        + __init__(model: str, engine: str, color: str, horsepower: int, base_price: float, pricing_strategy: PricingStrategy)
-        + set_pricing_strategy(pricing_strategy: PricingStrategy)
-        + display_details(): str
-    }
-
-    PricingStrategy <|-- RegularPricingStrategy
-    PricingStrategy <|-- DiscountPricingStrategy
-    Audi --> PricingStrategy : uses
 ```
 
 ## Висновки. 
