@@ -56,27 +56,17 @@ Adapter, Bridge, Composite, Decorator, Facade, Flyweight.
 
 ```mermaid
 classDiagram
-    class Audi {
-        - model: str
-        - engine: str
-        - color: str
-        - horsepower: int
-        + __init__(model: str, engine: str, color: str, horsepower: int)
-        + display_details(): str
+    class Character {
+        -name: str
+        -level: int
+        +__init__(name, level)
+        +clone()
     }
-
-    class AudiProxy {
-        - _audi: Audi
-        - model: str
-        - engine: str
-        - color: str
-        - horsepower: int
-        + __init__(model: str, engine: str, color: str, horsepower: int)
-        - _create_audi(): void
-        + display_details(): str
+    class deepcopy {
+        +deepcopy(self)
     }
+    Character o-- "1" deepcopy : Uses
 
-    AudiProxy --> Audi : uses
 ```
 ## Висновки. 
 На даній лабораторній роботі ми познайомились з групою структурних шаблонів проектування. 
