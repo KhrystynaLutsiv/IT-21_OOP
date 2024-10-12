@@ -34,6 +34,6 @@ library2 = MovieLibrary()
 library1.add_movie("Titanic", "Christopher Nolan")
 library2.add_movie("Harry Potter and the Philosopher's Stone", "James Cameron")
 
-print(library1 is library2)  # True
+print(library1 is library2)  
 
 library1.list_movies()
