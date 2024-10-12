@@ -26,7 +26,8 @@
 
 [Практична робота №11](https://github.com/KhrystynaLutsiv/IT-21_OOP/blob/master/Anna_Prendota/lab%2011/1) 
 
-UML-діаграма
+[UML-діаграма]()
+
 ![Movie Library Diagram](lab11.png)
 
 ## Висновки. 
