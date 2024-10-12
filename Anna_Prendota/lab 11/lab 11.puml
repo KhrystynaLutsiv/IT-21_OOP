@@ -45,6 +45,7 @@ class Movie {
 MovieLibrary "1" o-- "*" Movie : contains
 @enduml
 
+
 UML-діаграма
 
 ## Висновки. 
