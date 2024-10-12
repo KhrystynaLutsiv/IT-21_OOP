@@ -24,7 +24,10 @@
 2. Навести приклад коду який реалізовує даний шаблон
 3. Скласти його UML-діаграму 
 
-[Практична робота №11](https://github.com/KhrystynaLutsiv/IT-21_OOP/blob/master/Anna_Prendota/lab%2011/1)
+[Практична робота №11](https://github.com/KhrystynaLutsiv/IT-21_OOP/blob/master/Anna_Prendota/lab%2011/1) 
+
+UML-діаграма
+![Movie Library Diagram](lab11.png)
 
 ## Висновки. 
 
