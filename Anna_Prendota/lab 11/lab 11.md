@@ -26,6 +26,27 @@
 
 [Практична робота №11](https://github.com/KhrystynaLutsiv/IT-21_OOP/blob/master/Anna_Prendota/lab%2011/1)
 
+@startuml
+class MovieLibrary {
+    - _instance: MovieLibrary
+    - movies: List<Movie>
+    __new__(cls)
+    add_movie(title: str, director: str)
+    list_movies()
+}
+
+class Movie {
+    + title: str
+    + director: str
+    __init__(title: str, director: str)
+    __str__(): str
+}
+
+MovieLibrary "1" o-- "*" Movie : contains
+@enduml
+
+UML-діаграма
+
 ## Висновки. 
 
 На даній лабораторній роботі я ознайомилася з твірними шаблонами проєктування та навчилася використовувати їх на практиці. Це дало змогу зрозуміти, як створювати об'єкти ефективно та гнучко, забезпечуючи більшу масштабність і підтримку коду в проєках. 
