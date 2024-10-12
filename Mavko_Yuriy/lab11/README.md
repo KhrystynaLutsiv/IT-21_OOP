@@ -105,6 +105,8 @@ classDiagram
     OfficeComputerBuilder --> Computer : Creates
 ```
 
+.... [->](./builder.py)
+
 Запитання для самоконтролю
 1. Що таке твірні шаблони?
 2. Які твірні шаблони Вам відомі?

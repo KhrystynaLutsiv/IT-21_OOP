@@ -47,37 +47,25 @@ Proxy є посередником між клієнтом і реальним о
 Adapter, Bridge, Composite, Decorator, Facade, Flyweight.
 
 3.Компоненти реалізації:
-Клас Audi:клас, який представляє об'єкт, що має атрибути model, engine, color і horsepower.
-Метод display_details() виводить деталі автомобіля
-Клас AudiProxy:контролює доступ до класу Audi.має атрибути для зберігання інформації про автомобіль (model, engine, color, horsepower) і для зберігання реального об'єкта Audi у _audi.
-Метод _create_audi() перевіряє, чи створений об'єкт Audi. Якщо ні, він створює його з параметрами.
-Метод display_details() викликає _create_audi(), щоб переконатися,чи об'єкт створено, перш ніж викликати його метод display_details().
-У if __name__ == "__main__":створюється об'єкт audi_proxy класу AudiProxy з параметрами для автомобіля.
+Базовий персонаж: У мене є початковий об’єкт base_character з деякими значеннями за замовчуванням.
+Клонування: Метод clone використовує copy.deepcopy(self), щоб створити новий, незалежний об’єкт з такими ж властивостями.
+Новий персонаж:Я створюю копію базового персонажа, а потім налаштовуєш властивості нового об’єкта, не впливаючи на оригінал.
+Цей шаблон чудово підходить для створення нових об’єктів.
 
 ```mermaid
 classDiagram
-    class Audi {
-        - model: str
-        - engine: str
-        - color: str
-        - horsepower: int
-        + __init__(model: str, engine: str, color: str, horsepower: int)
-        + display_details(): str
+    class Character {
+        -name: str
+        -level: int
+        +__init__(name, level)
+        +clone()
     }
-
-    class AudiProxy {
-        - _audi: Audi
-        - model: str
-        - engine: str
-        - color: str
-        - horsepower: int
-        + __init__(model: str, engine: str, color: str, horsepower: int)
-        - _create_audi(): void
-        + display_details(): str
+    class deepcopy {
+        +deepcopy(self)
     }
-
-    AudiProxy --> Audi : uses
+    Character o-- "1" deepcopy : Uses
 ```
+uml діаграма 
 ## Висновки. 
 На даній лабораторній роботі ми познайомились з групою структурних шаблонів проектування. 
 
