@@ -14,7 +14,6 @@
 
 
 
-
 **Мета: познайомитися з групою структурних шаблонів проектування.**
 
 
@@ -26,9 +25,7 @@
 
 [Практична робота №12](https://github.com/KhrystynaLutsiv/IT-21_OOP/blob/master/Anna_Prendota/lab%2012/text)
 
-![MovieLibraryFacade](lab 12.png)
-
-![UML-діаграма]([https://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000])
+![UML-діаграма класів](lab 12.png)
 
 
 ## Висновки. 
