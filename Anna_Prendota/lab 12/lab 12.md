@@ -26,9 +26,10 @@
 
 [Практична робота №12](https://github.com/KhrystynaLutsiv/IT-21_OOP/blob/master/Anna_Prendota/lab%2012/text)
 
-![Movie Library Diagram](lab 12.png)
+![MovieLibraryFacade](lab 12.png)
 
-UML-діаграма
+![UML-діаграма]([https://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000])
+
 
 ## Висновки. 
 
