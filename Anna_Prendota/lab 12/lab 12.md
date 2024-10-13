@@ -26,7 +26,8 @@
 
 [Практична робота №12](https://github.com/KhrystynaLutsiv/IT-21_OOP/blob/master/Anna_Prendota/lab%2012/text)
 
-[UML-діаграма]([https://github.com/KhrystynaLutsiv/IT-21_OOP/blob/master/Anna_Prendota/lab%2012/lab%2012.png])
+![UML-діаграма](lab12.png)
+
 
 
 ## Висновки. 
