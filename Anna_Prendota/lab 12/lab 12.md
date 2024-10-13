@@ -24,7 +24,7 @@
 2. Навести приклад коду який реалізовує даний шаблон
 3. Скласти його UML-діаграму 
 
-[Практична робота №12](https://github.com/KhrystynaLutsiv/IT-21_OOP/blob/master/Anna_Prendota/lab%2012/text)
+[Практична робота №12](https://github.com/KhrystynaLutsiv/IT-21_OOP/blob/master/Anna_Prendota/lab%2012/text.py)
 
 ![UML-діаграма](lab12.png) 
 
