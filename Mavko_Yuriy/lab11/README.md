@@ -126,7 +126,7 @@ classDiagram
     GamingComputerBuilder --> Computer : Creates
     OfficeComputerBuilder --> Computer : Creates
 ```
-Рисунок UML діаграмі на основі [коду.](./builder.py)
+Рисунок UML діаграми на основі [коду.](./builder.py)
 
 
 ## Висновки. 
