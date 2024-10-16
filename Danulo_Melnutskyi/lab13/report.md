@@ -29,8 +29,27 @@
 
 UML-ДІАГРАМА
 ```mermaid
+classDiagram
+    class Subject {
+        +attach(observer)
+        +detach(observer)
+        +notify(message)
+    }
 
+    class Observer {
+        +update(message)
+    }
+
+    class NewsSubscriber {
+        +update(message)
+        +name
+    }
+
+    Subject o-- Observer : manages
+    Observer <|-- NewsSubscriber
 ```
 
 Діаграма стосується [коду.](./13.pattern_observer.py)
+
+
 
