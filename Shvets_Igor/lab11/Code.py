@@ -15,8 +15,6 @@ class Laptop:
                 f"Processor: {self.processor}\n"
                 f"Graphics Card: {self.graphics_card}\n")
 
-
-
 class LaptopBuilder:
     def __init__(self):
         self.laptop = Laptop()
