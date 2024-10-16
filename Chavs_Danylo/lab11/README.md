@@ -8,9 +8,9 @@
 
 
 
-| **Виконав: студент групи ІТ-31 Юрій Мавко**  |
+| Виконав: студент групи ІТ-31 Данило Чавс     |
 |----------------------------------------------|
-| **Перевірив: Татомир А. В.**                 |
+| Перевірив: Татомир А. В.                     |
 
 
 
@@ -52,87 +52,59 @@
 
 **Опис коду**
 
-Код реалізує патерн Builder для створення комп'ютерів різних типів. 
-Є два основні типи комп'ютерів: ігровий з потужними характеристиками 
-та офісний з простішими компонентами.
+Код реалізує патерн Factory Method для створення комп'ютерів різних типів.
 
-Клас **Computer** представляє комп'ютер із трьома характеристиками: 
-процесором, відеокартою та оперативною пам'яттю. Є метод для виведення 
-інформації про комп'ютер у зручному форматі.
+Клас Vehicle: Цей клас представляє загальний транспортний засіб з такими атрибутами,
+ як кількість коліс, тип двигуна та колір.
 
-Інтерфейс **ComputerBuilder** визначає методи для налаштування 
-компонентів комп'ютера: set_cpu, set_gpu, set_ram, а також метод reset 
-для скидання конфігурації.
+Клас VehicleFactory: Абстрактний базовий клас для фабрик, які створюють транспортні засоби.
 
-**GamingComputerBuilder** - це клас, що реалізує будівельника для 
-створення ігрового комп'ютера з високопродуктивними компонентами: 
-процесор Intel Core i9, відеокарта NVIDIA RTX 3090, 32 GB оперативної 
-пам'яті. Він дозволяє поетапно налаштовувати конфігурацію.
+Класи CarFactory, MotorcycleFactory, ElectricCarFactory: 
+Підкласи VehicleFactory, які реалізують метод create_vehicle, щоб повертати конкретні типи транспортних засобів.
 
-**OfficeComputerBuilder** - це будівельник для створення офісного 
-комп'ютера. Він використовує простіші компоненти: процесор Intel 
-Core i5, вбудовану відеокарту та 8 GB оперативної пам'яті.
+Функція build_vehicle: Функція, яка приймає фабрику і повертає транспортний засіб, створений цією фабрикою.
 
-Клас **Director** відповідає за побудову комп'ютера, використовуючи 
-одного з будівельників. Він має методи для створення ігрового або 
-офісного комп'ютера, викликаючи відповідні налаштування компонентів.
-
-
-```mermaid
+```
 classDiagram
-    class Computer {
-        -cpu: str
-        -gpu: str
-        -ram: int
+    class Vehicle {
+        -wheels: int
+        -engine_type: str
+        -color: str
         +__str__(): str
     }
 
-    class ComputerBuilder {
+    class VehicleFactory {
         <<interface>>
-        +reset()
-        +set_cpu()
-        +set_gpu()
-        +set_ram()
+        +create_vehicle(): Vehicle
     }
 
-    class GamingComputerBuilder {
-        -computer: Computer
-        +reset()
-        +set_cpu()
-        +set_gpu()
-        +set_ram()
-        +get_result(): Computer
+    class CarFactory {
+        +create_vehicle(): Vehicle
     }
 
-    class OfficeComputerBuilder {
-        -computer: Computer
-        +reset()
-        +set_cpu()
-        +set_gpu()
-        +set_ram()
-        +get_result(): Computer
+    class MotorcycleFactory {
+        +create_vehicle(): Vehicle
     }
 
-    class Director {
-        -builder: ComputerBuilder
-        +__init__(builder: ComputerBuilder)
-        +build_gaming_computer(): Computer
-        +build_office_computer(): Computer
+    class ElectricCarFactory {
+        +create_vehicle(): Vehicle
     }
 
-    Director --> ComputerBuilder : uses
-    ComputerBuilder <|-- GamingComputerBuilder
-    ComputerBuilder <|-- OfficeComputerBuilder
-    GamingComputerBuilder --> Computer : Creates
-    OfficeComputerBuilder --> Computer : Creates
+    VehicleFactory <|-- CarFactory
+    VehicleFactory <|-- MotorcycleFactory
+    VehicleFactory <|-- ElectricCarFactory
+    CarFactory --> Vehicle : Creates
+    MotorcycleFactory --> Vehicle : Creates
+    ElectricCarFactory --> Vehicle : Creates
+
 ```
-Рисунок UML діаграми на основі [коду.](./builder.py)
+
 
 
 ## Висновки. 
 
 На даній лабораторній роботі я ознайомився з групою твірних 
-шаблонів проєктування, зокрема із шаблоном Builder. Під час 
+шаблонів проєктування, зокрема із шаблоном Factory method. Під час 
 виконання роботи я навчився відокремлювати процес створення 
 об'єктів від їхньої реалізації, що дозволяє створювати об'єкти 
 з різними конфігураціями, не змінюючи їхнього базового коду. 

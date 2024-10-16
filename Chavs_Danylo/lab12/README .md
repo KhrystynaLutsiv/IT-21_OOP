@@ -8,9 +8,9 @@
 
 
 
-| **Виконав: студент групи ІТ-31 Юрій Мавко**  |
+| Виконав: студент групи ІТ-31 Данило Чавс     |
 |----------------------------------------------|
-| **Перевірив: Татомир А. В.**                 |
+| Перевірив: Татомир А.В.                      |
 
 
 
@@ -50,43 +50,53 @@
 
 **Опис коду**
 
-Клас **OldPrinter** представляє старий принтер, який має метод print_text, що виконує друк тексту у стандартному форматі.
+NotificationImplementation: Абстрактний клас, що визначає інтерфейс для відправки сповіщень.
 
-**NewPrinterInterface** є новим інтерфейсом для принтерів, що визначає метод print_message, але не реалізує його.
+EmailNotification та SMSNotification: 
+Конкретні реалізації NotificationImplementation, кожна з яких визначає, як відправити сповіщення.
 
-Клас **PrinterAdapter** реалізує новий інтерфейс, приймаючи об'єкт старого принтера в своєму конструкторі. Він забезпечує адаптацію, викликаючи метод print_text старого принтера через метод print_message, що дозволяє використовувати старий принтер з новим інтерфейсом.
-
-Функція **client_code** приймає принтер (який може бути будь-яким, що реалізує новий інтерфейс) і викликає метод print_message, передаючи текст для друку.
-
+client_code: Функція, яка використовує мости для відправки сповіщень.
 
 ```mermaid
-classDiagram
-    class OldPrinter {
-        +print_text(text: str)
-    }
 
-    class NewPrinterInterface {
-        <<interface>>
-        +print_message(message: str)
-    }
+class NotificationImplementation {
+    +send_notification(message: str)
+}
 
-    class PrinterAdapter {
-        -old_printer: OldPrinter
-        +__init__(old_printer: OldPrinter)
-        +print_message(message: str)
-    }
+class EmailNotification {
+    +send_notification(message: str)
+}
 
-    NewPrinterInterface <|.. PrinterAdapter
-    PrinterAdapter --> OldPrinter : delegates
+class SMSNotification {
+    +send_notification(message: str)
+}
+
+class NotificationBridge {
+    -implementation: NotificationImplementation
+    +__init__(implementation: NotificationImplementation)
+    +notify(message: str)
+}
+
+class Client {
+    +client_code(notification: NotificationBridge)
+}
+
+NotificationImplementation <|.. EmailNotification
+NotificationImplementation <|.. SMSNotification
+NotificationBridge --> NotificationImplementation : uses
+Client --> NotificationBridge : uses
+
+
+
 ```
 
-Рисунок UML діаграми на основі [коду.](./adapter.py)
+
 
 
 ## Висновки. 
 
 На даній лабораторній роботі я ознайомився з групою структурних 
-шаблонів проектування, зокрема із шаблоном Адаптер. Під час виконання 
+шаблонів проектування, зокрема із шаблоном bridge. Під час виконання 
 роботи я навчився інтегрувати старі класи в нові системи, не змінюючи 
 їхню внутрішню реалізацію, що дозволяє забезпечити сумісність між 
 різними інтерфейсами. Це підвищує гнучкість та модульність програмного 
