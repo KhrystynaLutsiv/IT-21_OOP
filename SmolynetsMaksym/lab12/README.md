@@ -55,30 +55,31 @@
    меню може містити як окремі страви , так і підменю.
 
 ```mermaid
-abstract class MenuComponent {
-    +add(component: MenuComponent)
-    +remove(component: MenuComponent)
-    +show()
-}
+classDiagram
+    class MenuComponent {
+        +add(component: MenuComponent)
+        +remove(component: MenuComponent)
+        +show()
+    }
 
-class MenuItem extends MenuComponent {
-    -name: str
-    -price: float
-    +__init__(name: str, price: float)
-    +show()
-}
+    class MenuItem {
+        -name: str
+        -price: float
+        +__init__(name: str, price: float)
+        +show()
+    }
 
-class Menu extends MenuComponent {
-    -name: str
-    -items: list<MenuComponent>
-    +__init__(name: str)
-    +add(component: MenuComponent)
-    +remove(component: MenuComponent)
-    +show()
-}
+    class Menu {
+        -name: str
+        -items: list<MenuComponent>
+        +__init__(name: str)
+        +add(component: MenuComponent)
+        +remove(component: MenuComponent)
+        +show()
+    }
 
-MenuComponent <|-- MenuItem
-MenuComponent <|-- Menu
+    MenuComponent <|-- MenuItem
+    MenuComponent <|-- Menu
 ```
 Рисунок UML діаграми на основі [коду.](./compositee.py)
 
