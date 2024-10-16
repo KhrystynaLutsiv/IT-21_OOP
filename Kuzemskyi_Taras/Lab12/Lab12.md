@@ -45,6 +45,7 @@ clone), який повертає новий об'єкт, що є копією �
 **UML-діаграма**
 
 '''mermaid
+
 classDiagram
     class Document {
         +__init__(title: str, content: str)
@@ -56,4 +57,5 @@ classDiagram
 
     Document : +title
     Document : +content
+
     ```
