@@ -24,7 +24,6 @@ class NewsSubscriber(Observer):
     def update(self, message):
         print(f"{self.name} отримав нове повідомлення: {message}")
 
-
 subject = Subject()
 
 subscriber1 = NewsSubscriber("Карл")
