@@ -43,7 +43,7 @@
 
 **UML-діаграма**
 
-'''mermaid
+```mermaid
 classDiagram
     class PaymentStrategy {
         +pay(amount: float)
