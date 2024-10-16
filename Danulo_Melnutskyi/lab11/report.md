@@ -23,13 +23,14 @@
 
 UML-ДІАГРАМА
 ```mermaid
-dot = Digraph()
+classDiagram
+    class Government {
+        - _instance: Government
+        + __new__(cls, *args, **kwargs)
+        + __init__(name)
+    }
 
-dot.node('Government', '''Government
-- _instance: Government
--------------------
-+ __new__(cls, *args, **kwargs)
-+ __init__(name)''')
+    Government : +getInstance() 
 ```
 
 
