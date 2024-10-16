@@ -1,1 +1,0 @@
-There is located lab №1.
