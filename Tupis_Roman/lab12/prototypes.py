@@ -1,27 +1,27 @@
 """Prototype (Прототип)
 Для чого він використовується? Патерн Prototype дозволяє створювати нові об’єкти, використовуючи існуючий об’єкт як прототип. Це дозволяє уникнути повторного створення об’єктів з нуля. Наприклад, якщо у нас є об’єкт з певним станом або конфігурацією, ми можемо клонувати його, змінюючи лише необхідні параметри.
-
-Як він працює?
-
-Кожен об’єкт, який може бути клонований, реалізує інтерфейс або базовий клас Cloneable.
-При створенні нового об’єкта використовується клонування прототипу.
-Приклад використання: Давай уявимо, що ми розробляємо гру, де гравці можуть створювати своїх персонажів. У нас є базовий об’єкт “Персонаж”, який містить загальні характеристики (ім’я, рівень, здоров’я тощо). Коли гравець створює нового персонажа, ми можемо клонувати базовий об’єкт “Персонаж” і змінювати лише необхідні параметри (наприклад, ім’я та вигляд)."""
+"""
 
 import copy
-class Character:
-    def __init__(self, name, level):
-        self.name = name
-        self.level = level
+
+class Animal:
+    def __init__(self, species):
+        self.species = species
 
     def clone(self):
         return copy.deepcopy(self)
 
-# Базовий об'єкт "Персонаж"
-base_character = Character(name="John", level=1)
+# Створюємо прототип
+original_dog = Animal(species="Dog")
 
-# Створюємо нового персонажа на основі прототипу
-new_character = base_character.clone()
-new_character.name = "Alice"
-new_character.level = 3
+# Клонуємо прототип для створення нових об'єктів
+dog1 = original_dog.clone()
+dog2 = original_dog.clone()
 
-print(f"Ім'я: {new_character.name}, Рівень: {new_character.level}")
+# Змінюємо властивості клонованих об'єктів
+dog1.species = "Golden Retriever"
+dog2.species = "Dachshund"
+
+print(f"Dog 1 species: {dog1.species}")
+print(f"Dog 2 species: {dog2.species}")
+
