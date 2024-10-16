@@ -9,11 +9,7 @@ class Song(Music):
         self.artist = artist
 
     def play(self):
-        print(f"Грає пісня: {self.name} від {self.artist}")
-
-    def show_by_artist(self, artist):
-        if self.artist == artist:
-            print(f"Пісня: {self.name}, Виконавець: {self.artist}")
+        print(f"Пісня: {self.name}, Виконавець: {self.artist}")
 
 
 class Playlist(Music):
@@ -31,7 +27,10 @@ class Playlist(Music):
 
     def show_by_artist(self, artist):
         for child in self.children:
-            child.show_by_artist(artist)
+            if isinstance(child, Song) and child.artist == artist:
+                child.play()
+            elif isinstance(child, Playlist):
+                child.show_by_artist(artist)
 
 
 main_playlist = Playlist("Усі пісні")
