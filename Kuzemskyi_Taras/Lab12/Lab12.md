@@ -43,6 +43,7 @@ clone), який повертає новий об'єкт, що є копією �
 нього.
 
 **UML-діаграма**
+
 '''mermaid
 classDiagram
     class Document {
@@ -55,4 +56,4 @@ classDiagram
 
     Document : +title
     Document : +content
-```
+    ```

@@ -46,6 +46,7 @@
 UML-діаграму.
 
 **UML-діаграма**
+
 ```mermaid 
 classDiagram
     class Car {
