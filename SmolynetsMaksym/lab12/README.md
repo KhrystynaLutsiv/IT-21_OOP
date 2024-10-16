@@ -55,52 +55,30 @@
    меню може містити як окремі страви , так і підменю.
 
 ```mermaid
-classDiagram
-    class Computer {
-        -cpu: str
-        -gpu: str
-        -ram: int
-        +__str__(): str
-    }
+abstract class MenuComponent {
+    +add(component: MenuComponent)
+    +remove(component: MenuComponent)
+    +show()
+}
 
-    class ComputerBuilder {
-        <<interface>>
-        +reset()
-        +set_cpu()
-        +set_gpu()
-        +set_ram()
-    }
+class MenuItem extends MenuComponent {
+    -name: str
+    -price: float
+    +__init__(name: str, price: float)
+    +show()
+}
 
-    class GamingComputerBuilder {
-        -computer: Computer
-        +reset()
-        +set_cpu()
-        +set_gpu()
-        +set_ram()
-        +get_result(): Computer
-    }
+class Menu extends MenuComponent {
+    -name: str
+    -items: list<MenuComponent>
+    +__init__(name: str)
+    +add(component: MenuComponent)
+    +remove(component: MenuComponent)
+    +show()
+}
 
-    class OfficeComputerBuilder {
-        -computer: Computer
-        +reset()
-        +set_cpu()
-        +set_gpu()
-        +set_ram()
-        +get_result(): Computer
-    }
-
-    class Director { 
-        -builder: ComputerBuilder
-        +__init__(builder: ComputerBuilder)
-        +build_gaming_computer(): Computer
-        +build_office_computer(): Computer
-    }
-
-    Director --> ComputerBuilder : uses
-    ComputerBuilder <|-- GamingComputerBuilder
-    ComputerBuilder <|-- OfficeComputerBuilder
-    GamingComputerBuilder --> Computer : Creates
-    OfficeComputerBuilder --> Computer : Creates
+MenuComponent <|-- MenuItem
+MenuComponent <|-- Menu
 ```
 Рисунок UML діаграми на основі [коду.](./compositee.py)
 
