@@ -1,0 +1,43 @@
+
+     <<Interface>>  
+      Visitor       
+
+ + visit_concrete_component_a(element: ConcreteComponentA): void 
+ + visit_concrete_component_b(element: ConcreteComponentB): void 
+
+         
+         
+         
+
+   ConcreteVisitor1     
+
+ + visit_concrete_component_a(element: ConcreteComponentA): void 
+ + visit_concrete_component_b(element: ConcreteComponentB): void 
+         
+         
+         
+
+   ConcreteVisitor2     
+
+ + visit_concrete_component_a(element: ConcreteComponentA): void 
+ + visit_concrete_component_b(element: ConcreteComponentB): void 
+
+
+                            
+                            
+                            
+  
+     <<Interface>>         <<Interface>>  
+     Component            Component      
+
+ + accept(visitor: Visitor): void         
+
+          
+          
+          
+  
+  ConcreteComponentA       ConcreteComponentB    
+ 
+ + accept(visitor: Visitor): void  
+ + exclusive_method_of_concrete_component_a(): string 
+ + special_method_of_concrete_component_b(): string   
