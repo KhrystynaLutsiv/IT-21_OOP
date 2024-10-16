@@ -24,3 +24,29 @@
 Адаптер — це структурний шаблон проектування, який дозволяє об'єктам з несумісними інтерфейсами працювати разом. Адаптер виконує роль посередника, який перетворює один інтерфейс в інший, щоб об'єкти могли взаємодіяти, не змінюючи їхній код.
 
 
+Цей код реалізовує шаблон адаптера (Adapter Pattern), який дозволяє об'єктам з несумісними інтерфейсами працювати разом.
+
+UML-ДІАГРАМА
+```mermaid
+classDiagram
+    class EuropeanSocket {
+        +voltage(): int
+        +plug_type(): string
+    }
+
+    class AmericanDevice {
+        +power_on(voltage: int)
+    }
+
+    class SocketAdapter {
+        +voltage(): int
+        +plug_type(): string
+    }
+
+    EuropeanSocket <|-- SocketAdapter
+    SocketAdapter o-- EuropeanSocket
+```
+
+Діаграма стосується [коду.](./12.patern_adapter.py)
+
+
