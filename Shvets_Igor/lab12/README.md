@@ -65,7 +65,7 @@ classDiagram
     Game --> AircraftFactory : uses
     AircraftFactory --> Aircraft : creates
 ```
-Рисунок UML діаграми на основі [коду.](./Code.py)
+Рисунок UML діаграми на основі [коду.](./code.py)
 
 
 
