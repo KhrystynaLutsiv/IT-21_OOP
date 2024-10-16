@@ -33,7 +33,7 @@ classDiagram
     Government : +getInstance() 
 ```
 
-Діаграма стосується [коду.] (./11.pattern_creational.py)
+Діаграма стосується [коду.](./11.pattern_creational.py)
 
 
 
