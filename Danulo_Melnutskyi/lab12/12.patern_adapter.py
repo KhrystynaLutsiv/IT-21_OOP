@@ -15,7 +15,6 @@ class AmericanDevice:
             print("Неправильний вольтаж, пристрій не може увімкнутися.")
 
 
-
 class SocketAdapter:
     def __init__(self, european_socket):
         self.european_socket = european_socket

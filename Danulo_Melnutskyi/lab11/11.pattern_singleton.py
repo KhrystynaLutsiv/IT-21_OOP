@@ -20,3 +20,4 @@ goverment2 = Government("Новий Уряд")
 print(goverment2.name)
 
 print(goverment1 is goverment2)
+
