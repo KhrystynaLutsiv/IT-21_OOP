@@ -47,32 +47,65 @@
 
 **Опис коду**
 
- - Клас **Memento** зберігає стан об'єкта.
- - Клас **Originator** має методи для створення мементо та відновлення стану з  мементо.
- - Клас **Caretaker** відповідає за зберігання та управління мементо.
+ Опис класів:
+IMemento:
+
+- **IMemento** це інтерфейс для зберігача стану. Він визначає методи get_dollars і get_euro, 
+які дозволяють отримати збережені значення.
+ExchangeMemento:
+
+- **ExchangeMemento** конкретна реалізація інтерфейсу IMemento. Він зберігає поточний стан об'єкта 
+Exchange, включаючи кількість доларів і євро.
+Exchange:
+
+- **Exchange** це об'єкт, який представляє валютний обмін. Він має методи для продажу доларів
+(sell), покупки євро (buy), а також для збереження поточного стану через метод 
+save() та відновлення через метод restore().
+Memory:
+
+- **Memory** клас, який управляє збереженими станами (історією) об'єкта Exchange. Він 
+дозволяє створювати "знімки" стану через метод backup() і повертатися до 
+попереднього стану за допомогою методу undo().
 
 ```mermaid
 classDiagram
-    class Memento {
-        -state: str
-        +__init__(state: str)
+    class IMemento {
+        +get_dollars() int
+        +get_euro() int
     }
 
-    class Originator {
-        -state: str
-        +set_state(state: str)
-        +save_state_to_memento(): Memento
-        +restore_state_from_memento(memento: Memento)
+    class ExchangeMemento {
+        -__dollars: int
+        -__euro: int
+        +__init__(d: int, e: int)
+        +get_dollars() int
+        +get_euro() int
     }
 
-    class Caretaker {
-        -mementos: list
-        +add_memento(memento: Memento)
-        +get_memento(index: int): Memento
+    class Exchange {
+        -__dollars: int
+        -__euro: int
+        +__init__(d: int, e: int)
+        +get_dollars()
+        +get_euro()
+        +sell()
+        +buy()
+        +save() ExchangeMemento
+        +restore(memento: IMemento)
     }
 
-    Caretaker --> Memento : stores
-    Originator --> Memento : creates
+    class Memory {
+        -__exchange: Exchange
+        -__history: Deque[IMemento]
+        +__init__(exchange: Exchange)
+        +backup()
+        +undo()
+    }
+
+    IMemento <|-- ExchangeMemento
+    ExchangeMemento --> Exchange : stores state
+    Exchange --> IMemento : uses
+    Memory --> Exchange : manages
 ```
 Рисунок UML діаграми на основі [коду.](./momentomory.py)
 
