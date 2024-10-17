@@ -19,7 +19,7 @@ class Observer:
 
 class NewsSubscriber(Observer):
     def __init__(self, name):
-        self.name = name  # Ім'я підписника
+        self.name = name 
 
     def update(self, message):
         print(f"{self.name} отримав нове повідомлення: {message}")
