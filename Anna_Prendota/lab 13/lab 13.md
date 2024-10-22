@@ -97,8 +97,6 @@
 
 ![UML-діаграма](lab13.png) 
 
-![UML-діаграмааа](https://www.plantuml.com/plantuml/uml/bP312W8X48RlFiNWQIlsq3KYzW4w13s0kEjKmghXZ454xvxLRYxH9KyoVj-CypV4Ed9olUXwJGIxrFQMJXZX9Y2V6YYrr4NROYHOmTOIh_UVqkO5BK0fwoqhLSs6WZP65RCgrzoZw2CTqOKB_Y7umFPmdGXKEIJIHymuSURkuhrHaSjANhk1-_v-UHadfRFHZ3-wbwJaKaAeQv1pEPcMqIvurjQJ40rwympv0G00)
-
 UML-діаграма
 
 ## Висновки. 
