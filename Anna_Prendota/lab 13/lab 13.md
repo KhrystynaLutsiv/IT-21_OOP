@@ -97,7 +97,7 @@
 
 ![UML-діаграма](lab13.png) 
 
-![UML-діаграмааа](https://www.planttext.com/?text=bP312i8m343l_OhGqrHsy3f4_00FWXzGkZLgOMsbIGKH_zqgsph4Ypc5zBsaoOvOHqwk5rslYU2GsjxI1ICy1EIeWL9BNRGjHe86zfPuSvnAsm-q0gMijwnKjHWAsXXLpAgakKVHHpgY2pVyG_21xUa-4wXoIAJFc77Yp3t5i56HfvMyTWFt_VtoCavALwCPVtGlbv9h2Q6kGIxbV5e3NV2ihISXTkZD-yWl)
+![UML-діаграмааа](https://www.plantuml.com/plantuml/uml/bP312W8X48RlFiNWQIlsq3KYzW4w13s0kEjKmghXZ454xvxLRYxH9KyoVj-CypV4Ed9olUXwJGIxrFQMJXZX9Y2V6YYrr4NROYHOmTOIh_UVqkO5BK0fwoqhLSs6WZP65RCgrzoZw2CTqOKB_Y7umFPmdGXKEIJIHymuSURkuhrHaSjANhk1-_v-UHadfRFHZ3-wbwJaKaAeQv1pEPcMqIvurjQJ40rwympv0G00)
 
 UML-діаграма
 
