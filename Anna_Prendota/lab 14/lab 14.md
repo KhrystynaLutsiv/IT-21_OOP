@@ -86,7 +86,7 @@ OrderProcessor отримує певний платіжний процесор (
 
 [Практична робота №14](https://github.com/KhrystynaLutsiv/IT-21_OOP/blob/master/Anna_Prendota/lab%2014/text.py)
 
-![UML-діаграма]() 
+![UML-діаграма](https://github.com/KhrystynaLutsiv/IT-21_OOP/blob/master/Anna_Prendota/lab%2014/text.py) 
 
 UML-діаграма
 
