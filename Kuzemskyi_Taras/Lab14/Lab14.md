@@ -24,6 +24,18 @@
 коду.
 
 **Опис**
+Принципи SOLID — це набір із п’яти основних принципів об’єктно-орієнтованого проєктування, спрямованих на створення більш гнучких, розширюваних і підтримуваних систем. Вони допомагають уникати антипатернів та покращують модульність програм.
+
+1. S: Single Responsibility Principle (SRP)
+Клас повинен мати тільки одну причину для змін, тобто виконувати лише одну задачу.
+2. O: Open/Closed Principle (OCP)
+Класи повинні бути відкриті для розширення, але закриті для модифікації.
+3. L: Liskov Substitution Principle (LSP)
+Об’єкти похідного класу повинні замінювати об’єкти базового класу без порушення роботи програми.
+4. I: Interface Segregation Principle (ISP)
+Клас не повинен залежати від інтерфейсів, які він не використовує.
+5. D: Dependency Inversion Principle (DIP)
+Модулі верхнього рівня не повинні залежати від модулів нижнього рівня. Обидва повинні залежати від абстракцій.
 
 Принцип Open/Closed Principle (OCP) є одним із п’яти принципів SOLID, що визначають якісне програмування в об'єктно-орієнтованих мовах.
 
@@ -34,37 +46,6 @@
 
 Клас AreaCalculator не потребує змін, коли додаються нові типи фігур, оскільки кожен новий тип фігури реалізує метод calculate_area згідно з інтерфейсом Shape. Таким чином, ми можемо додавати нові класи фігур без модифікації вже існуючих класів і не порушуємо принцип OCP.
 
-
- *UML-Діаграма*
-
- ```mermaid
- from graphviz import Digraph
-
-# Create a UML class diagram using Graphviz
-uml = Digraph("UML_Diagram", format="png")
-uml.attr(rankdir="BT")
-
-# Define styles for clarity
-uml.attr('node', shape='record', fontname='Helvetica')
-
-# Classes
-uml.node("Shape", '''{Shape|+ calculate_area() : float}''', style="dashed")
-uml.node("Circle", '''{Circle|+ radius : float\\l+ calculate_area() : float}''')
-uml.node("Square", '''{Square|+ side : float\\l+ calculate_area() : float}''')
-uml.node("AreaCalculator", '''{AreaCalculator|+ calculate_area(shape: Shape) : float}''')
-
-# Relationships
-uml.edge("Shape", "Circle", arrowhead="onormal", label="inherits")
-uml.edge("Shape", "Square", arrowhead="onormal", label="inherits")
-uml.edge("AreaCalculator", "Shape", arrowhead="open", label="uses")
-
-# Render and display the diagram
-uml_filepath = "/mnt/data/UML_Diagram"
-uml.render(uml_filepath, cleanup=True)
-uml_filepath + ".png"
-
-
-   ```
 
 ## Висновки
 Я навчився використовувати принципи SOLID, а саме принцип OCP.
