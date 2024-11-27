@@ -1,4 +1,4 @@
-```plantuml
+```mermaid
 @startuml
 skinparam style strictuml
 
