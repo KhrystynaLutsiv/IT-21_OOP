@@ -1,4 +1,4 @@
-# Порушення рефакторингу
+# До рефакторингу
 def check_role(user):
     if user.role == 'admin':
         return 'Access granted: Admin privileges'
@@ -10,7 +10,7 @@ def check_role(user):
         return 'Access denied'
     
 
-# Використання рефакторингу
+# після рефакторингу
     def check_role(user):
     role_access = {
         'admin': 'Access granted: Admin privileges',
